@@ -10,17 +10,17 @@ function setup()
     video.hide();
 }
 
+function modelLoaded() 
+{
+    console.log("Model Loaded!")
+    status = true;
+}
+
   function start()
 {
   objectDetector = ml5.objectDetector('cocossd', modelLoaded);
   document.getElementById("status").innerHTML = "Status : Detecting Objects";
   object_name = document.getElementById("object_name").value;
-}
-
-function modelLoaded() 
-{
-    console.log("Model Loaded!")
-    status = true;
 }
 
 function draw()
